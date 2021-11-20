@@ -15,8 +15,8 @@ provider "aws" {
 resource "null_resource" "example1" {
   provisioner "local-exec" {
     command = <<-EOT
-      chmod +x script.sh
-      ./script.sh
+      echo "Hello"
+      echo "docker test"
     EOT
     interpreter = ["/bin/bash"]
   }
