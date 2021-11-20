@@ -14,7 +14,7 @@ provider "aws" {
 
 resource "null_resource" "example1" {
   provisioner "local-exec" {
-    command = "docker"
+    command = "lscpu"
     interpreter = ["/bin/bash"]
   }
 }
