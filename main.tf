@@ -14,7 +14,10 @@ provider "aws" {
 
 resource "null_resource" "example1" {
   provisioner "local-exec" {
-    command = "chmod +x script.sh; ./script.sh"
+    command = <<-EOT
+      chmod +x script.sh;
+      ./script.sh
+    EOT
     interpreter = ["/bin/bash"]
   }
 }
