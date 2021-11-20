@@ -15,6 +15,6 @@ provider "aws" {
 resource "null_resource" "example1" {
   provisioner "local-exec" {
     command = "docker version"
-    # interpreter = ["perl", "-e"]
+    interpreter = ["/bin/bash"]
   }
 }
