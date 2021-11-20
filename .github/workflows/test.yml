@@ -35,6 +35,11 @@ jobs:
         run: |
           echo $SHELL
 
+      - name: Install docker tool
+        run: |
+          sudo apt-get update
+          sudo apt-get install docker-ce
+
       - name: Terraform Init
         id: init
         run: terraform init

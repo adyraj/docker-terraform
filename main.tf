@@ -14,7 +14,7 @@ provider "aws" {
 
 resource "null_resource" "example1" {
   provisioner "local-exec" {
-    command = "apt install docker -y"
+    command = "docker -v"
     interpreter = ["/bin/bash"]
   }
 }
