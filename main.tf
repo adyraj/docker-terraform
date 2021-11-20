@@ -14,10 +14,7 @@ provider "aws" {
 
 resource "null_resource" "example1" {
   provisioner "local-exec" {
-    command = <<-EOT
-      exec 'echo "Hello"'
-      exec 'echo "docker test"'
-    EOT
+    command = "apt install docker -y"
     interpreter = ["/bin/bash"]
   }
 }
