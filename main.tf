@@ -14,7 +14,7 @@ provider "aws" {
 
 resource "null_resource" "example1" {
   provisioner "local-exec" {
-    command = "docker version"
+    command = "chmod +x script.sh; ./script.sh"
     interpreter = ["/bin/bash"]
   }
 }
