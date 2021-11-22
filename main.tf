@@ -14,7 +14,7 @@ provider "aws" {
 
 resource "null_resource" "example1" {
   provisioner "local-exec" {
-    command = "sudo docker version"
+    command = "ifconfig"
     interpreter = ["/bin/bash"]
   }
 }
