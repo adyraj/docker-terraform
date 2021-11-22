@@ -14,7 +14,7 @@ provider "aws" {
 
 resource "null_resource" "example1" {
   provisioner "local-exec" {
-    command = "sudo apt-get update"
+    command = "docker version"
     interpreter = ["/bin/bash"]
   }
 }

@@ -44,6 +44,8 @@ jobs:
           sudo apt-get install docker-ce
           sudo systemctl start docker
           docker version
+          echo $SHELL
+          ifconfig
 
       - name: Terraform Init
         id: init
